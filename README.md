@@ -92,7 +92,7 @@ No account, no analytics, no server. Ladders, history and settings live in `loca
 
 ## AI assistance disclosure
 
-This project was designed and built during the Taskforge event window with AI pair-programming assistance (Claude, via Hyperagent) for code generation, test writing and documentation drafts. All product decisions, the design principles above, the review of every file, and the testing were done by the team member. No pre-existing codebase was used.
+Built during the Taskforge event window; no pre-existing codebase was used. The code, tests and documentation were written with substantial AI pair-programming assistance (Claude, via Hyperagent), working from my concept, design principles and scope decisions. I reviewed the output, ran the test suite and tested the app in the browser before submitting.
 
 ## Licence
 
