@@ -1,0 +1,20 @@
+{
+  "name": "focus-ladder",
+  "version": "0.1.0",
+  "description": "Turn an overwhelming task into a ladder of five-minute rungs. Keyboard-first, screen-reader friendly, offline, no accounts.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "node tools/serve.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bundle": "node tools/bundle-single.js"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.2",
+    "esbuild": "^0.24.2",
+    "jsdom": "^25.0.1",
+    "vitest": "^2.1.8"
+  }
+}

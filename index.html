@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto" data-size="medium" data-font="system" data-motion="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focus Ladder — turn an overwhelming task into five-minute rungs</title>
+  <meta name="description" content="Focus Ladder turns a task you cannot start into a ladder of five-minute rungs and shows you one rung at a time. Keyboard-first, screen-reader friendly, works offline, no account.">
+  <meta name="theme-color" content="#1f5f4f">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="app-header">
+    <a class="brand" href="#/" aria-label="Focus Ladder home">
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect x="7" y="2" width="4" height="28" rx="2" fill="currentColor"/>
+        <rect x="21" y="2" width="4" height="28" rx="2" fill="currentColor"/>
+        <rect x="9" y="7" width="14" height="3" rx="1.5" fill="currentColor"/>
+        <rect x="9" y="14.5" width="14" height="3" rx="1.5" fill="currentColor"/>
+        <rect x="9" y="22" width="14" height="3" rx="1.5" fill="currentColor"/>
+      </svg>
+      <span>Focus Ladder</span>
+    </a>
+    <nav class="app-nav" aria-label="Main">
+      <button type="button" data-nav="dump">New ladder</button>
+      <button type="button" data-nav="ladder" id="nav-ladder">My ladder</button>
+      <button type="button" data-nav="help">Help</button>
+      <button type="button" data-open="settings" aria-haspopup="dialog">Settings</button>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="view" aria-live="off"></div>
+  </main>
+
+  <footer class="app-footer">
+    <span>No account. Nothing leaves your device. Works offline.</span>
+    <span><a href="https://github.com/" id="repo-link" rel="noopener">Source code</a> · MIT licence</span>
+  </footer>
+
+  <div id="announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  <div id="announcer-assertive" class="sr-only" aria-live="assertive" aria-atomic="true"></div>
+
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <div class="dialog-body" id="settings-body"></div>
+  </dialog>
+
+  <dialog id="stuck-dialog" aria-labelledby="stuck-title">
+    <div class="dialog-body" id="stuck-body"></div>
+  </dialog>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
